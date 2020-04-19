@@ -3,12 +3,13 @@
     font-family: monospace;
     font-size: 18px;
     color: #424141;
-    scroll-behavior: smooth;
 }
 
 .header {
     background-color: black;
     height: 60px;
+    width: 100%;
+    position: fixed;
 }
 
 ul {
@@ -22,21 +23,32 @@ ul li {
     color: #FFF;
 }
 
-ul li:hover {
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+a:hover, a:active {
     color: #888;
     cursor: pointer;
 }
 
 .main-content {
-    padding: 50px;
+    padding: 30px;
     width: 750px;
     margin: auto;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#bio, #about, #contact {
+    padding-top: 60px;
 }
 
 .bio, .about, .contact {
     border-left: 1px solid #ccc;
     padding-left: 20px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     text-align: justify;
 }
 
@@ -96,5 +108,27 @@ button {
     color: #FFF;
     text-align: center;
     line-height:60px;
-    font-family: monospace;
+    width: 100%;
+}
+
+@media ( max-width: 768px ) {
+    * {
+        font-size: 15px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .bio img {
+        margin: 0 auto 30px;
+    }
+
+    .bio, .about, .contact {
+        text-align: left;
+    }
+
+    form {
+        width: 100%;
+    }
 }
